@@ -1,0 +1,3 @@
+# Golang FlameGrapsh生成器
+
+可以解析golang通过pprof生成的文件或者通过url的形式去收集profiling数据，然后生成flamegraph图查看。
