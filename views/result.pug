@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    label
+        | #{error}
+
+
+    div.container
+        div.panel
+            div.panel-heading
+                h1
+                    a(href="/")  
+                        | Back
+        div.row
+            h1
+                | FlameGraph图
+            div
+                | !{svg}
+
+        div.row
+            h1
+                | 数据内容
+            textarea.well.form-control(style="overflow-y:visible;height:800em")
+                | #{raw}

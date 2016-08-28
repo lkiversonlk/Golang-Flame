@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    div.container
+        div.row
+            div.col-md-6.col-md-offset-3
+                div.page-header
+                    h1
+                        | 选择golang profiling data
+                form.form(role="form", action="/submit", enctype="multipart/form-data", method="post")
+                    div.form-group
+                        label(for="file")
+                            | 上传profiling文件
+                        input#file.form-contorl(type="file", name="file")
+                    div.form-group
+                        label(for="url")
+                            | 指定profiling url [需要等待30s才能返回结果]
+                        input#url.form-control(type="url", name="url")
+                    input(type="submit", value="确定").btn.btn-default
+                    div.form-group
+                    labelt.alert
+                            | #{error}
+                    
